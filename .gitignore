@@ -1,0 +1,8 @@
+.DS_Store
+.tarima
+.env
+*~
+*.log
+*.sqlite
+node_modules
+bower_components
