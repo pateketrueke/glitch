@@ -1,6 +1,6 @@
 # Grown & Tarima on Glitch
 
-This source is the same as running on https://grown-up.glitch.me/ &mdash; it showcases basic support for dynamic assets and pages.
+This source is the same as running on https://grown-at.glitch.me/ &mdash; it showcases basic support for dynamic assets and pages.
 
 ## How it works?
 
