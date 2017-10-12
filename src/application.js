@@ -27,6 +27,10 @@ module.exports = () => {
         css: 'less',
         pug: 'js',
       },
+      globals: {
+        version: Grown.version,
+        environment: app.config('env'),
+      },
     },
   }));
 
