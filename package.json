@@ -6,10 +6,17 @@
   "license": "MIT",
   "repository": "https://github.com/pateketrueke/grown",
   "scripts": {
-    "start": "node server.js"
+    "start": "node bin/server",
+    "watch": "tarima -ed -r bin/server -P localhost:8080"
+  },
+  "tarima": {
+    "src": " lib",
+    "watch": "lib",
+    "devPlugins": [
+      "tarima-lr"
+    ]
   },
   "dependencies": {
-    "buble": "^0.16.0",
     "grown": "^0.9.3",
     "kramed": "^0.5.6",
     "less": "^3.0.0-alpha.3",
@@ -18,6 +25,10 @@
     "serve-static": "^1.13.1",
     "tarima": "^3.8.0",
     "vue-template-compiler": "^2.4.4"
+  },
+  "devDependencies": {
+    "chokidar": "^1.7.0",
+    "tarima-lr": "^0.3.2"
   },
   "engines": {
     "node": "8.x"
