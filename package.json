@@ -2,7 +2,7 @@
   "name": "grown-up",
   "version": "0.0.1",
   "description": "Grown & Tarima on Glitch",
-  "main": "server.js",
+  "main": "lib/application.js",
   "license": "MIT",
   "repository": "https://github.com/pateketrueke/grown",
   "scripts": {
