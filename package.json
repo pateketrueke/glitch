@@ -2,7 +2,7 @@
   "name": "grown-at.glitch.me",
   "version": "0.0.1",
   "description": "Grown & Tarima on Glitch",
-  "main": "lib/application.js",
+  "main": "src/application.js",
   "license": "MIT",
   "repository": "https://github.com/pateketrueke/grown",
   "scripts": {
@@ -10,8 +10,8 @@
     "watch": "tarima -ed -r bin/server -P localhost:8080"
   },
   "tarima": {
-    "src": " lib",
-    "watch": "lib",
+    "src": " src",
+    "watch": "src",
     "devPlugins": [
       "tarima-lr"
     ]

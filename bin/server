@@ -5,13 +5,13 @@
 
 'use strict';
 
-let _closing;
-
-const bootstrap = require('../lib/application');
-
-process.stdout.write('Loading server...\r');
-
 function runApplication() {
+  const bootstrap = require('../src/application');
+
+  process.stdout.write('Loading server...\r');
+
+  let _closing;
+
   function close(cb) {
     _closing = true;
 
