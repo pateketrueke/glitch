@@ -4,7 +4,6 @@ import App from './App.vue.pug';
 
 const vm = new Vue({
   el: document.getElementById('app'),
-  props: ['value'],
   render: h => h(App),
 });
 
@@ -14,4 +13,4 @@ const message = `Grown v${version} / ENV: ${environment}`;
 
 console.log(message);
 
-vm.value = message
+vm.value = message;

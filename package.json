@@ -17,6 +17,7 @@
     ]
   },
   "dependencies": {
+    "buble": "^0.16.0",
     "grown": "^0.9.5",
     "kramed": "^0.5.6",
     "less": "^3.0.0-alpha.3",
