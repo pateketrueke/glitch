@@ -4,7 +4,7 @@
   "description": "Grown & Tarima on Glitch",
   "main": "src/application.js",
   "license": "MIT",
-  "repository": "https://github.com/pateketrueke/grown",
+  "repository": "https://github.com/pateketrueke/glitch",
   "scripts": {
     "start": "node bin/server",
     "watch": "tarima -ed -r bin/server -P localhost:8080"
