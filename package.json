@@ -6,7 +6,15 @@
   "license": "MIT",
   "repository": "https://github.com/pateketrueke/grown",
   "scripts": {
-    "start": "node server.js"
+    "start": "node bin/server",
+    "watch": "tarima -ed -r bin/server -P localhost:8080"
+  },
+  "tarima": {
+    "src": " lib",
+    "watch": "lib",
+    "devPlugins": [
+      "tarima-lr"
+    ]
   },
   "dependencies": {
     "grown": "^0.9.2",
@@ -17,6 +25,10 @@
     "pug": "^2.0.0-rc.4",
     "serve-static": "^1.13.1",
     "kramed": "^0.5.6"
+  },
+  "devDependencies": {
+    "chokidar": "^1.7.0",
+    "tarima-lr": "^0.3.2"
   },
   "engines": {
     "node": "8.x"
