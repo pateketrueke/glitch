@@ -1,9 +1,11 @@
-template
+<template lang="pug">
   div
     h1 OSOM
     p {{value}}
+</template>
 
-script.
+<script>
   export default {
     props: ['value'],
   }
+</script>

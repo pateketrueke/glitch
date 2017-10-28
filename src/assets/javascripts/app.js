@@ -1,4 +1,4 @@
-import App from './App.vue.pug';
+import App from './App.vue';
 
 /* global version, environment */
 
