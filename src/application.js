@@ -29,9 +29,12 @@ module.exports = () => {
       },
       globals: {
         version: Grown.version,
-        environment: app.config('env'),
+        environment: env,
       },
     },
+    assets: 'src/assets',
+    content: 'src/content',
+    templates: 'src/templates',
   }));
 
   return app;

@@ -4,7 +4,7 @@ html
     title= title || 'Untitled'
     link(rel='stylesheet' href='/stylesheets/styles.css')
   body
-    != body
+    != locals.yield
 
     ul
       li: a(href='/example') Example
