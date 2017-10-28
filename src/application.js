@@ -26,6 +26,7 @@ module.exports = () => {
       extensions: {
         css: 'less',
         pug: 'js',
+        js: 'es6',
       },
       globals: {
         version: Grown.version,
