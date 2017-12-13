@@ -1,46 +1,44 @@
-const Grown = require('grown');
+process.env.NODE_ENV = process.env.ENVIRONMENT;
 
-const env = process.env.ENVIRONMENT || process.env.NODE_ENV || 'development';
-const cwd = process.cwd();
+const Grown = require('@grown/grown')();
 
-Grown.env(cwd);
+Grown.use(require('@grown/logger'));
+Grown.use(require('@grown/static'));
+Grown.use(require('@grown/render'));
+Grown.use(require('@grown/tarima'));
 
 module.exports = () => {
   // initialize a new application context
-  const app = new Grown({ env, cwd });
+  const server = new Grown();
 
-  // rendering support
-  app.use(Grown.plugs.render({
-    folders: `${cwd}/src/templates`,
-  }));
-
-  // static sources
-  app.use(Grown.plugs.static({
-    folders: `${cwd}/public`,
-  }));
-
-  // dynamic sources
-  app.use(Grown.plugs.tarima({
-    bundleOptions: {
-      frontMatter: false,
-      extensions: {
-        css: 'less',
-        pug: 'js',
-        js: 'es6',
+  server.plug([
+    Grown.Logger,
+    Grown.Static({
+      static_folders: `${process.cwd()}/public`,
+    }),
+    Grown.Render({
+      view_folders: `${__dirname}/templates`,
+    }),
+    Grown.Tarima({
+      src_folders: __dirname,
+      bundle_options: {
+        frontMatter: false,
+        extensions: {
+          css: 'less',
+          pug: 'js',
+        },
+        globals: {
+          version: Grown.version,
+          environment: Grown.env,
+        },
       },
-      globals: {
-        version: Grown.version,
-        environment: env,
-      },
-    },
-    assets: 'src/assets',
-    content: 'src/content',
-    templates: 'src/templates',
-  }));
+    }),
+  ]);
 
-  return app;
+  server.on('listen', ctx => {
+    server.logger.printf('{% link Listening at: %} {% yellow %s %}\n', ctx.location.href);
+    server.logger.printf('{% log Press CTRL+C to quit... %}\n');
+  });
+
+  return server;
 };
-
-// export framework version and teardown
-module.exports.version = Grown.version;
-module.exports.teardown = cb => Grown.burn(cb);

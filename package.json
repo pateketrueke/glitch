@@ -1,6 +1,6 @@
 {
   "name": "grown-at.glitch.me",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Grown & Tarima on Glitch",
   "main": "src/application.js",
   "license": "MIT",
@@ -17,12 +17,16 @@
     ]
   },
   "dependencies": {
-    "buble": "^0.16.0",
-    "grown": "^0.18.1",
+    "@grown/grown": "0.1.0-alpha.8d93a56e",
+    "@grown/logger": "0.1.0-alpha.5a1bd19e",
+    "@grown/render": "0.1.0-alpha.8d93a56e",
+    "@grown/static": "0.1.0-alpha.8d93a56e",
+    "@grown/tarima": "0.1.0-alpha.8d93a56e",
+    "buble": "^0.18.0",
     "kramed": "^0.5.6",
     "less": "^3.0.0-alpha.3",
     "pug": "^2.0.0-rc.4",
-    "rollup": "^0.50.0",
+    "rollup": "^0.52.1",
     "serve-static": "^1.13.1",
     "tarima": "^3.10.1",
     "vue-template-compiler": "^2.4.4"
@@ -32,6 +36,6 @@
     "tarima-lr": "^0.3.2"
   },
   "engines": {
-    "node": "8.x"
+    "node": "4.x"
   }
 }

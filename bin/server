@@ -5,61 +5,15 @@
 
 'use strict';
 
-function runApplication() {
-  const bootstrap = require('../src/application');
+module.exports = () => {
+  const serverFactory = require('../src/application');
+  const server = serverFactory();
 
-  process.stdout.write('Loading server...\r');
+  server.listen(process.env.PORT);
 
-  let _closing;
-
-  function close(cb) {
-    _closing = true;
-
-    return bootstrap.teardown(() => {
-      _closing = false;
-
-      if (cb) {
-        cb();
-      }
-    });
-  }
-
-  function main() {
-    process.stdout.write('Starting framework...\r');
-
-    const farm = bootstrap();
-
-    farm.on('reload', () => {
-      if (!_closing) {
-        close(() => setTimeout(runApplication, 100));
-      }
-    });
-
-    return farm.run(() => farm.listen(process.env.PORT || 8080))
-      .then(app => {
-        process.stdout.write(`Listening on ${app.location.href} [press CTRL-C to quit]\n`);
-      })
-      .catch(error => {
-        process.stderr.write(`${error.toString()}\n`);
-
-        if (require.main === module) {
-          process.exit(1);
-        }
-      });
-  }
-
-  if (!_closing) {
-    main();
-  } else {
-    process.stdout.write('Closing previous instance...\r');
-    setTimeout(runApplication, 100);
-  }
-
-  return close;
-}
+  return server;
+};
 
 if (require.main === module) {
-  runApplication();
+  module.exports();
 }
-
-module.exports = () => runApplication();
