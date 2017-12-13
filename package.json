@@ -17,11 +17,11 @@
     ]
   },
   "dependencies": {
-    "@grown/grown": "0.1.0-alpha.8d93a56e",
-    "@grown/logger": "0.1.0-alpha.5a1bd19e",
-    "@grown/render": "0.1.0-alpha.8d93a56e",
-    "@grown/static": "0.1.0-alpha.8d93a56e",
-    "@grown/tarima": "0.1.0-alpha.8d93a56e",
+    "@grown/grown": "0.1.0-alpha.400418f5",
+    "@grown/logger": "0.1.0-alpha.400418f5",
+    "@grown/render": "0.1.0-alpha.400418f5",
+    "@grown/static": "0.1.0-alpha.400418f5",
+    "@grown/tarima": "0.1.0-alpha.400418f5",
     "buble": "^0.18.0",
     "kramed": "^0.5.6",
     "less": "^3.0.0-alpha.3",
