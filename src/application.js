@@ -39,8 +39,6 @@ module.exports = () => {
     server.logger.printf('{% link Listening at: %} {% yellow %s %}\n', ctx.location.href);
     server.logger.printf('{% log Press CTRL+C to quit... %}\n');
   });
-  
-  console.log(process.env);
 
   return server;
 };

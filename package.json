@@ -17,11 +17,11 @@
     ]
   },
   "dependencies": {
-    "@grown/grown": "0.1.0-alpha.400418f5",
-    "@grown/logger": "0.1.0-alpha.400418f5",
-    "@grown/render": "0.1.0-alpha.400418f5",
-    "@grown/static": "0.1.0-alpha.400418f5",
-    "@grown/tarima": "0.1.0-alpha.400418f5",
+    "@grown/grown": "0.1.0-alpha.315f6ead",
+    "@grown/logger": "0.1.0-alpha.315f6ead",
+    "@grown/render": "0.1.0-alpha.315f6ead",
+    "@grown/static": "0.1.0-alpha.315f6ead",
+    "@grown/tarima": "0.1.0-alpha.315f6ead",
     "buble": "^0.18.0",
     "kramed": "^0.5.6",
     "less": "^3.0.0-alpha.3",
@@ -29,6 +29,7 @@
     "rollup": "^0.52.1",
     "serve-static": "^1.13.1",
     "tarima": "^3.10.1",
+    "uws": "^9.14.0",
     "vue-template-compiler": "^2.4.4"
   },
   "devDependencies": {

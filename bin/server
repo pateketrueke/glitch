@@ -9,7 +9,7 @@ module.exports = () => {
   const serverFactory = require('../src/application');
   const server = serverFactory();
 
-  server.listen(process.env.PORT);
+  server.listen(`uws://0.0.0.0:${process.env.PORT}`);
 
   return server;
 };
