@@ -6,35 +6,22 @@
   "license": "MIT",
   "repository": "https://github.com/pateketrueke/glitch",
   "scripts": {
-    "start": "node bin/server -d",
-    "watch": "tarima -ed -r bin/server -P localhost:8080"
-  },
-  "tarima": {
-    "src": " src",
-    "watch": "src",
-    "devPlugins": [
-      "tarima-lr"
-    ]
+    "start": "node bin/server -d"
   },
   "dependencies": {
-    "@grown/grown": "0.1.0-alpha.315f6ead",
-    "@grown/logger": "0.1.0-alpha.315f6ead",
-    "@grown/render": "0.1.0-alpha.315f6ead",
-    "@grown/static": "0.1.0-alpha.315f6ead",
-    "@grown/tarima": "0.1.0-alpha.315f6ead",
+    "@grown/grown": "0.1.0-alpha.72c28013",
+    "@grown/logger": "0.1.0-alpha.72c28013",
+    "@grown/render": "0.1.0-alpha.72c28013",
+    "@grown/static": "0.1.0-alpha.72c28013",
+    "@grown/tarima": "0.1.0-alpha.72c28013",
     "buble": "^0.18.0",
     "kramed": "^0.5.6",
     "less": "^3.0.0-alpha.3",
     "pug": "^2.0.0-rc.4",
-    "rollup": "^0.52.1",
-    "serve-static": "^1.13.1",
+    "rollup": "^0.53.0",
     "tarima": "^3.10.1",
     "uws": "^9.14.0",
     "vue-template-compiler": "^2.4.4"
-  },
-  "devDependencies": {
-    "chokidar": "^1.7.0",
-    "tarima-lr": "^0.3.2"
   },
   "engines": {
     "node": "4.x"
