@@ -39,7 +39,9 @@ module.exports = () => {
   ]);
 
   server.on('listen', ctx => {
-    server.logger.printf('{% link Listening at: %} {% yellow %s %}\n', ctx.location.href);
+    const url = ctx.location.href.replace('uws:', 'http:');
+
+    server.logger.printf('{% link Listening at: %} {% yellow %s %}\n', url);
     server.logger.printf('{% log Press CTRL+C to quit... %}\n');
   });
 
