@@ -6,7 +6,7 @@
   "license": "MIT",
   "repository": "https://github.com/pateketrueke/glitch",
   "scripts": {
-    "start": "node bin/server -d"
+    "start": "node bin/server -d FORCE_COLOR=0"
   },
   "dependencies": {
     "@grown/grown": "0.1.0-alpha.72c28013",
