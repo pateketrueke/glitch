@@ -5,7 +5,6 @@ html
     link(rel='stylesheet' href='/stylesheets/styles.css')
   body
     != locals.yield
-    != Object.keys(locals).join(' ')
 
     ul
       li: a(href='/example') Example
