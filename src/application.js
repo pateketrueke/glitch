@@ -20,6 +20,7 @@ module.exports = () => {
       view_folders: `${__dirname}/templates`,
     }),
     Grown.Tarima({
+      content: 'pages',
       src_folders: __dirname,
       bundle_options: {
         frontMatter: false,
