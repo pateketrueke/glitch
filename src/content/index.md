@@ -1,6 +1,6 @@
 ---
 title: Example page
-$: default
+layout: default
 ---
 
 ## Example title
