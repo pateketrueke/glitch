@@ -9,11 +9,11 @@
     "start": "FORCE_COLOR=0 node bin/server -d"
   },
   "dependencies": {
-    "@grown/grown": "0.1.0-alpha.934077a2",
-    "@grown/logger": "0.1.0-alpha.934077a2",
-    "@grown/render": "0.1.0-alpha.934077a2",
-    "@grown/static": "0.1.0-alpha.934077a2",
-    "@grown/tarima": "0.1.0-alpha.934077a2",
+    "@grown/grown": "0.1.0-alpha.9b24b0a8",
+    "@grown/logger": "0.1.0-alpha.9b24b0a8",
+    "@grown/render": "0.1.0-alpha.9b24b0a8",
+    "@grown/static": "0.1.0-alpha.9b24b0a8",
+    "@grown/tarima": "0.1.0-alpha.9b24b0a8",
     "buble": "^0.18.0",
     "kramed": "^0.5.6",
     "less": "^3.0.0-alpha.3",
