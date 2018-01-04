@@ -4,9 +4,9 @@ This source is the same as running on [grown-at.glitch.me](https://grown-at.glit
 
 ## How it works?
 
-Files within `public/` are served as-is, while sources on `lib/` are imported and executed on-the-fly.
+Files within `public/` are served as-is, while sources on `src/` are imported and executed on-the-fly.
 
-Regular modules MUST be exported as ES6, e.g. `lib/content/example.js`
+Regular modules MUST be exported as ES6, e.g. `src/content/example.js`
 
 ```js
 export default state => `<p>
@@ -14,7 +14,7 @@ export default state => `<p>
 </p>`;
 ```
 
-Template objects are supported too, e.g. `lib/content/example.js`
+Template objects are supported too, e.g. `src/content/example.js`
 
 ```js
 export default {
@@ -23,7 +23,7 @@ export default {
 };
 ```
 
-You can use JSX on your render functions, e.g. `lib/content/example.jsx`
+You can use JSX on your render functions, e.g. `src/content/example.jsx`
 
 ```js
 export default (state, h) => <div>
@@ -31,13 +31,13 @@ export default (state, h) => <div>
 </div>;
 ```
 
-Pug is also supported, e.g. `lib/content/example.pug`
+Pug is also supported, e.g. `src/content/example.pug`
 
 ```pug
 h1 It works!
 ```
 
-Markdown pages, e.g. `lib/content/example.md`
+Markdown pages, e.g. `src/content/example.md`
 
 ```markdown
 ---
@@ -48,7 +48,7 @@ layout: custom
 ## It works?
 ```
 
-Assets also works the same way, e.g. `lib/assets/styles.css`
+Assets also works the same way, e.g. `src/assets/styles.css`
 
 ```less
 @color: red;
@@ -58,7 +58,7 @@ Assets also works the same way, e.g. `lib/assets/styles.css`
 }
 ```
 
-Now you can import that stylesheet on your pages, e.g. `lib/templates/default.pug`
+Now you can import that stylesheet on your pages, e.g. `src/templates/default.pug`
 
 ```pug
 doctype html

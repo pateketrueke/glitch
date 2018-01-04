@@ -1,20 +1,12 @@
 {
   "name": "grown-at.glitch.me",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Grown & Tarima on Glitch",
   "main": "src/application.js",
   "license": "MIT",
   "repository": "https://github.com/pateketrueke/glitch",
   "scripts": {
-    "start": "node bin/server",
-    "watch": "tarima -ed -r bin/server -P localhost:8080"
-  },
-  "tarima": {
-    "src": " src",
-    "watch": "src",
-    "devPlugins": [
-      "tarima-lr"
-    ]
+    "start": "FORCE_COLOR=0 node bin/server -d"
   },
   "dependencies": {
     "grown": "^0.9.2",
@@ -28,11 +20,7 @@
     "serve-static": "^1.13.1",
     "tarima": "^3.10.1"
   },
-  "devDependencies": {
-    "chokidar": "^1.7.0",
-    "tarima-lr": "^0.3.2"
-  },
   "engines": {
-    "node": "8.x"
+    "node": "4.x"
   }
 }
