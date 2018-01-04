@@ -11,7 +11,7 @@ This source is the same as running on [grown-at.glitch.me](https://grown-at.glit
 
 > Note: content files are intended to be pages only, regardless its extension
 
-Exported modules MUST used ES6 syntax, e.g. `src/content/example.js`
+Exported modules MUST use ES6 syntax, e.g. `src/content/example.js`
 
 ```js
 export default state => `<p>
