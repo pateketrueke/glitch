@@ -9,13 +9,12 @@
     "start": "FORCE_COLOR=0 node bin/server -d"
   },
   "dependencies": {
-    "@grown/bud": "0.0.14",
     "@grown/logger": "0.0.6",
     "@grown/render": "0.0.4",
-    "@grown/server": "0.0.7",
     "@grown/static": "0.0.3",
     "@grown/tarima": "0.0.4",
     "buble": "^0.19.7",
+    "grown": "^1.1.2",
     "kramed": "^0.5.6",
     "less": "^3.0.0-alpha.3",
     "pug": "^2.0.0-rc.4",
