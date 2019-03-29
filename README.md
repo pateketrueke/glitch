@@ -4,9 +4,14 @@ This source is the same as running on [grown-at.glitch.me](https://grown-at.glit
 
 ## How it works?
 
-Files within `public/` are served as-is, while sources on `src/` are imported and executed on-the-fly.
+- Files within `public/` are served as-is, they are just static files, nothing special here
+- Files from `src/` are imported and executed on-the-fly, see below
 
-Regular modules MUST be exported as ES6, e.g. `src/content/example.js`
+## Content
+
+> Note: content files are intended to be pages only, regardless its extension
+
+Exported modules MUST use ES6 syntax, e.g. `src/content/example.js`
 
 ```js
 export default state => `<p>
@@ -14,7 +19,7 @@ export default state => `<p>
 </p>`;
 ```
 
-Template objects are supported too, e.g. `src/content/example.js`
+Template _objects_ are supported too, e.g. `src/content/example.js`
 
 ```js
 export default {
@@ -23,9 +28,10 @@ export default {
 };
 ```
 
-You can use JSX on your render functions, e.g. `src/content/example.jsx`
+You can use JSX on your `render` functions, e.g. `src/content/example.jsx`
 
 ```js
+// the second argument `h` is required
 export default (state, h) => <div>
   {state.body}
 </div>;
@@ -45,10 +51,26 @@ title: My page
 layout: custom
 ---
 
-## It works?
+## It works!
 ```
 
-Assets also works the same way, e.g. `src/assets/styles.css`
+Also, you can use templates for your content, e.g. `src/templates/custom.pug`
+
+```pug
+doctype html
+html
+  head
+    title= title || 'Untitled'
+    link(rel='stylesheet' href='/stylesheets/styles.css')
+  body
+    != locals.yield
+```
+
+## Assets
+
+> Note: asset files are just javascript (bundled or not) and css
+
+Stylesheets works (by default using `LESS`), e.g. `src/assets/stylesheets/styles.css`
 
 ```less
 @color: red;
@@ -58,11 +80,31 @@ Assets also works the same way, e.g. `src/assets/styles.css`
 }
 ```
 
-Now you can import that stylesheet on your pages, e.g. `src/templates/default.pug`
+Javascript sources are always bundled, e.g. `src/assets/javascripts/application.js`
 
-```pug
-doctype html
-html
-  head
-    link(rel='stylesheet' href='/styles.css')
+> Note: files and folders starting with `_` are ignored for serving, so they are not accesible publicly
+
+You MUST use the `import` syntax for splitting your code and properly organize your application, scripts, etc.
+
+```js
+// here we're using Vue.js for our front-end
+import App from './_components/App.vue';
+
+// mount the application on the DOM
+const vm = new Vue({
+  el: '#app',
+  render: h => h(App),
+});
 ```
+
+## Usage
+
+You can refer to generated files as follows:
+
+- `public/robots.txt` &rarr; `/robots.txt`
+- `src/content/example.md` &rarr; `/example`
+- `src/content/sub/page.jsx` &rarr; `/sub/page`
+- `src/assets/stylesheets/styles.css` &rarr; `/stylesheets/styles.css`
+- `src/assets/javascripts/application.js` &rarr; `/javascripts/application.js`
+
+> From this point, you're free to change everything you need to fit your needs.

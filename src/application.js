@@ -1,7 +1,9 @@
 process.env.NODE_ENV = process.env.ENVIRONMENT;
 
-const Grown = require('@grown/grown')();
+const Grown = require('@grown/bud')();
+const pkg = require('../package');
 
+Grown.use(require('@grown/server'));
 Grown.use(require('@grown/logger'));
 Grown.use(require('@grown/static'));
 Grown.use(require('@grown/render'));
@@ -29,7 +31,7 @@ module.exports = () => {
           js: 'es6',
         },
         globals: {
-          version: Grown.version,
+          version: pkg.version,
           environment: Grown.env,
         },
       },
