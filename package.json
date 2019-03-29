@@ -11,16 +11,15 @@
   "dependencies": {
     "@grown/bud": "0.0.14",
     "@grown/logger": "0.0.6",
-    "@grown/render": "0.0.3",
+    "@grown/render": "0.0.4",
     "@grown/server": "0.0.6",
     "@grown/static": "0.0.3",
-    "@grown/tarima": "0.0.3",
+    "@grown/tarima": "0.0.4",
     "buble": "^0.19.7",
     "kramed": "^0.5.6",
     "less": "^3.0.0-alpha.3",
     "pug": "^2.0.0-rc.4",
-    "rollup": "^1.7.4",
-    "tarima": "^4.4.4"
+    "rollup": "^1.7.4"
   },
   "engines": {
     "node": "10"
